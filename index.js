@@ -111,3 +111,49 @@ function handleCTAClick() {
     // You can add navigation here later
     console.log('CTA Button clicked - Ready to redirect to contact');
 }
+
+// MOBILE MENU WITH SLIDE + CLOSE BUTTON
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('open');
+  
+  // Optional: prevent body scroll when menu open
+  if (menu.classList.contains('open')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'visible';
+  }
+}
+
+// Close menu when clicking a link
+document.querySelectorAll('.mobile-menu .nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.body.style.overflow = 'visible';
+  });
+});
+
+// Sync language buttons (desktop + mobile)
+function setLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll('[data-de]').forEach(el => {
+    const val = el.getAttribute('data-' + lang);
+    if (val) el.innerHTML = val;
+  });
+
+  // Sync all language buttons
+  ['DE', 'EN'].forEach(l => {
+    const btns = document.querySelectorAll(`.lang-btn[id*="btn${l}"]`);
+    btns.forEach(btn => btn.classList.toggle('active', lang.toLowerCase() === l.toLowerCase()));
+  });
+}
+
+// Close mobile menu on resize to desktop
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 992) {
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.body.style.overflow = 'visible';
+  }
+});
