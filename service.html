@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERA for Empowerment & Development e.V.</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="images/Logo -2.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.jpeg" alt="ERA Logo">
+      <div class="nav-logo-text">
+        <strong>ERA e.V.</strong>
+        <span data-de="Empowerment & Development" data-en="Empowerment & Development">Empowerment & Development</span>
+      </div>
+    </a>
+
+    <!-- DESKTOP NAV LINKS -->
+    <ul class="nav-links" id="desktopNav">
+      <li><a href="index.html" class="active" data-de="Startseite" data-en="Home">Startseite</a></li>
+      <li><a href="About.html" data-de="Über uns" data-en="About Us">Über uns</a></li>
+      <li><a href="service.html" data-de="Dienstleistungen" data-en="Services">Dienstleistungen</a></li>
+      <li><a href="News.html" data-de="Aktuelles" data-en="News">Aktuelles</a></li>
+      <li><a href="contact.html" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
+    </ul>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="close-btn" onclick="toggleMenu()" aria-label="Close Menu">✕</button>
+      
+      <ul class="nav-links" id="mobileNav">
+        <li><a href="index.html" class="active" data-de="Startseite" data-en="Home">Startseite</a></li>
+        <li><a href="About.html" data-de="Über uns" data-en="About Us">Über uns</a></li>
+        <li><a href="service.html" data-de="Dienstleistungen" data-en="Services">Dienstleistungen</a></li>
+        <li><a href="News.html" data-de="Aktuelles" data-en="News">Aktuelles</a></li>
+        <li><a href="contact.html" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
+      </ul>
+
+      <div class="lang-switcher-mobile">
+        <button class="lang-btn active" id="btnDE-mobile" onclick="setLang('de')">DE</button>
+        <button class="lang-btn" id="btnEN-mobile" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="lang-btn active" id="btnDE" onclick="setLang('de')">DE</button>
+        <button class="lang-btn" id="btnEN" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="contact.html" class="donate-btn" data-de="Kontakt" data-en="Get Involved">Kontakt</a>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
+
+
+   <section class="services" id="services">
+  <div class="section-inner">
+    <div style="text-align:center; max-width:600px; margin:0 auto 0;">
+      <span class="section-tag" data-de="Was wir tun" data-en="What We Do">Was wir tun</span>
+      <h2 class="section-title" data-de="Unsere <em>Kernbereiche</em>" data-en="Our <em>Core Areas</em>">
+        Unsere <em>Kernbereiche</em>
+      </h2>
+      <div class="divider" style="margin:16px auto;"></div>
+      <p class="section-lead" data-de="Der Verein verfolgt ausschließlich und unmittelbar gemeinnützige Zwecke. Unsere Arbeit konzentriert sich auf fünf zentrale Säulen."
+         data-en="The association pursues exclusively and directly charitable purposes. Our work focuses on five central pillars.">
+        Der Verein verfolgt ausschließlich und unmittelbar gemeinnützige Zwecke. Unsere Arbeit konzentriert sich auf fünf zentrale Säulen.
+      </p>
+    </div>
+
+```
+<div class="services-grid">
+
+  <div class="service-card">
+    <div class="service-icon">
+      <i class='bx bx-group'></i>
+    </div>
+    <h3 data-de="Jugend- und Altenhilfe" data-en="Youth and Senior Services">Jugend- und Altenhilfe</h3>
+    <p data-de="Wir schlagen Brücken zwischen den Generationen. Durch gezielte Programme unterstützen wir junge Menschen in ihrer persönlichen Entwicklung und fördern die soziale Teilhabe älterer Mitmenschen."
+       data-en="We build bridges between generations. Through targeted programs, we support young people in their personal development while promoting social participation and quality of life for older adults.">
+      Wir schlagen Brücken zwischen den Generationen. Durch gezielte Programme unterstützen wir junge Menschen in ihrer persönlichen Entwicklung und fördern die soziale Teilhabe älterer Mitmenschen.
+    </p>
+  </div>
+
+  <div class="service-card">
+    <div class="service-icon">
+      <i class='bx bx-world'></i>
+    </div>
+    <h3 data-de="Förderung internationaler Gesinnung" data-en="Promoting an International Outlook">Förderung internationaler Gesinnung</h3>
+    <p data-de="Dortmund ist vielfältig, und die Welt ist vernetzt. Wir setzen uns für Toleranz, interkulturellen Dialog und Völkerverständigung ein, um Vorurteile abzubauen und ein friedliches Miteinander zu stärken."
+       data-en="Dortmund is diverse, and the world is interconnected. We are committed to tolerance, intercultural dialogue, and international understanding to break down prejudices and strengthen peaceful coexistence.">
+      Dortmund ist vielfältig, und die Welt ist vernetzt. Wir setzen uns für Toleranz, interkulturellen Dialog und Völkerverständigung ein, um Vorurteile abzubauen und ein friedliches Miteinander zu stärken.
+    </p>
+  </div>
+
+  <div class="service-card">
+    <div class="service-icon">
+      <i class='bx bx-globe-alt'></i>
+    </div>
+    <h3 data-de="Entwicklungszusammenarbeit" data-en="Development Cooperation">Entwicklungszusammenarbeit</h3>
+    <p data-de="Durch nachhaltige Partnerschaften und Projekte engagieren wir uns für eine gerechtere Verteilung von Chancen und Ressourcen – über Grenzen hinweg."
+       data-en="Through sustainable partnerships and projects, we work toward a more equitable distribution of opportunities and resources — across borders.">
+      Durch nachhaltige Partnerschaften und Projekte engagieren wir uns für eine gerechtere Verteilung von Chancen und Ressourcen – über Grenzen hinweg.
+    </p>
+  </div>
+
+  <div class="service-card">
+    <div class="service-icon">
+      <i class='bx bx-female-sign'></i>
+    </div>
+    <h3 data-de="Gleichberechtigung von Frauen und Männern" data-en="Gender Equality">Gleichberechtigung von Frauen und Männern</h3>
+    <p data-de="Empowerment ist Teil unseres Namens. Wir fördern aktiv die Chancengleichheit und setzen uns gegen Diskriminierung ein, damit alle Menschen dieselben Möglichkeiten zur persönlichen und beruflichen Entfaltung erhalten."
+       data-en="Empowerment is part of our name. We actively promote equal opportunity and stand against discrimination so that all people have the same opportunities for personal and professional growth.">
+      Empowerment ist Teil unseres Namens. Wir fördern aktiv die Chancengleichheit und setzen uns gegen Diskriminierung ein.
+    </p>
+  </div>
+
+  <div class="service-card">
+    <div class="service-icon">
+      <i class='bx bx-football'></i>
+    </div>
+    <h3 data-de="Förderung des Sports" data-en="Promotion of Sports">Förderung des Sports</h3>
+    <p data-de="Sport verbindet Menschen, stärkt Gesundheit und vermittelt wichtige soziale Werte. ERA e.V. engagiert sich für die Förderung sportlicher Aktivitäten."
+       data-en="Sports bring people together, improve health, and instill important social values. ERA e.V. is committed to promoting sports activities.">
+      Sport verbindet Menschen, stärkt Gesundheit und vermittelt wichtige soziale Werte.
+    </p>
+  </div>
+
+  <div class="service-card" style="background: linear-gradient(135deg, var(--blue-dark), var(--blue-mid)); border-top-color: var(--accent);">
+    <div class="service-icon" style="background: rgba(255,255,255,0.15);">
+      <i class='bx bx-heart-circle' style="color:white;"></i>
+    </div>
+
+    <h3 style="color:white;" data-de="Mitmachen" data-en="Get Involved">Mitmachen</h3>
+    <p style="color:rgba(255,255,255,0.8);"
+       data-de="Werden Sie Teil unserer Gemeinschaft. Gemeinsam schaffen wir Strukturen, die Menschen befähigen, ihre Zukunft selbstbestimmt zu gestalten."
+       data-en="Become part of our community. Together, we create structures that empower people to take control of their own futures.">
+      Werden Sie Teil unserer Gemeinschaft. Gemeinsam schaffen wir Strukturen, die Menschen befähigen.
+    </p>
+
+    <a href="contact.html" class="btn-primary" style="margin-top:16px; display:inline-flex;">
+      Kontakt →
+    </a>
+  </div>
+
+</div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+
+    <!-- ABOUT -->
+    <div class="footer-about">
+      <img src="images/Logo -2.png" alt="Logo">
+
+      <p data-de="ERA für Empowerment und Entwicklung e.V. – gemeinnützig, transparent und leidenschaftlich für eine gerechtere Welt engagiert."
+         data-en="ERA for Empowerment and Development e.V. – nonprofit, transparent, and passionately committed to a more just world.">
+        ERA for Empowerment und Entwicklung e.V. – gemeinnützig, transparent und leidenschaftlich für eine gerechtere Welt engagiert.
+      </p>
+
+      <div class="footer-social">
+        <a href="#" title="Facebook"><i class='bx bxl-facebook'></i></a>
+        <a href="#" title="Instagram"><i class='bx bxl-instagram'></i></a>
+        <a href="#" title="YouTube"><i class='bx bxl-youtube'></i></a>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="footer-col">
+      <h4 data-de="Navigation" data-en="Navigation">
+        <i class='bx bx-navigation'></i>
+        <span data-de="Navigation" data-en="Navigation">Navigation</span>
+      </h4>
+
+      <ul>
+        <li>
+          <a href="index.html">
+            <i class='bx bx-home'></i>
+            <span data-de="Startseite" data-en="Home">Startseite</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="About.html">
+            <i class='bx bx-user'></i>
+            <span data-de="Über uns" data-en="About Us">Über uns</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="service.html">
+            <i class='bx bx-briefcase'></i>
+            <span data-de="Dienstleistungen" data-en="Services">Dienstleistungen</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="News.html">
+            <i class='bx bx-news'></i>
+            <span data-de="Aktuelles" data-en="News">Aktuelles</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html">
+            <i class='bx bx-envelope'></i>
+            <span data-de="Kontakt" data-en="Contact">Kontakt</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-col">
+      <h4 data-de="Leistungen" data-en="Services">
+        <i class='bx bx-grid-alt'></i>
+        <span data-de="Leistungen" data-en="Services">Leistungen</span>
+      </h4>
+
+      <ul>
+        <li>
+          <a href="service.html">
+            <i class='bx bx-group'></i>
+            <span data-de="Jugend- und Altenhilfe" data-en="Youth & Senior Services">
+              Jugend- & Altenhilfe
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="service.html">
+            <i class='bx bx-globe'></i>
+            <span data-de="Internationale Gesinnung" data-en="International Outlook">
+              Internationale Gesinnung
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="service.html">
+            <i class='bx bx-world'></i>
+            <span data-de="Entwicklungszusammenarbeit" data-en="Development Cooperation">
+              Entwicklungszusammenarbeit
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="service.html">
+            <i class='bx bx-female'></i>
+            <span data-de="Gleichberechtigung" data-en="Gender Equality">
+              Gleichberechtigung
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="service.html">
+            <i class='bx bx-football'></i>
+            <span data-de="Sportförderung" data-en="Sports Promotion">
+              Sportförderung
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+      <h4 data-de="Kontakt" data-en="Contact">
+        <i class='bx bx-phone'></i>
+        <span data-de="Kontakt" data-en="Contact">Kontakt</span>
+      </h4>
+
+      <div class="footer-contact-item">
+        <i class='bx bx-map'></i>
+        <span>Kemminghauser Str. 153, 44399 Dortmund</span>
+      </div>
+
+      <div class="footer-contact-item">
+        <i class='bx bx-phone'></i>
+        <span>+49 157 55 58 44 26</span>
+      </div>
+
+      <div class="footer-contact-item">
+        <i class='bx bx-envelope'></i>
+        <span>info@era-dortmund.de</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <span>© 2025 ERA for Empowerment & Development e.V. Dortmund</span>
+    <span data-de="Alle Rechte vorbehalten" data-en="All rights reserved">
+      Alle Rechte vorbehalten
+    </span>
+  </div>
+</footer>
+<script src="index.js"></script>
+</body>
+</html>
