@@ -1147,8 +1147,8 @@ footer {
   padding-bottom: 48px;
 }
 .footer-about img {
-  height: 110px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
   margin-bottom: 16px;
   filter: brightness(1) drop-shadow(0 0 0px transparent);
   background: white;

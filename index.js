@@ -183,3 +183,73 @@ const ctaBtn = document.getElementById('ctaBtn');
 if (ctaBtn) {
 ctaBtn.addEventListener('click', handleCTAClick);
 }
+
+
+(function () {
+  var track  = document.getElementById('partnersTrack');
+  var dotsEl = document.getElementById('partnersDots');
+  if (!track) return;
+
+  var cards     = Array.from(track.querySelectorAll('.partner-card'));
+  var current   = 0;
+  var autoTimer = null;
+
+  function visibleCount() {
+    if (window.innerWidth >= 1024) return 4;
+    if (window.innerWidth >= 768)  return 3;
+    if (window.innerWidth >= 480)  return 2;
+    return 1;
+  }
+
+  function totalPages() {
+    return Math.ceil(cards.length / visibleCount());
+  }
+
+  function buildDots() {
+    dotsEl.innerHTML = '';
+    for (var i = 0; i < totalPages(); i++) {
+      var d = document.createElement('button');
+      d.className = 'partners-dot' + (i === current ? ' active' : '');
+      d.setAttribute('aria-label', 'Seite ' + (i + 1));
+      (function(idx){ d.addEventListener('click', function(){ goTo(idx); }); })(i);
+      dotsEl.appendChild(d);
+    }
+  }
+
+  function goTo(page) {
+    var pages = totalPages();
+    current   = (page + pages) % pages;
+    var vc    = visibleCount();
+    var cardW = track.parentElement.offsetWidth / vc;
+    track.style.transform = 'translateX(-' + (current * vc * cardW) + 'px)';
+    buildDots();
+  }
+
+  function startAuto() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(function(){ goTo(current + 1); }, 3500);
+  }
+
+  track.parentElement.addEventListener('mouseenter', function(){ clearInterval(autoTimer); });
+  track.parentElement.addEventListener('mouseleave', startAuto);
+
+  document.querySelector('.partners-prev').addEventListener('click', function(){ goTo(current - 1); startAuto(); });
+  document.querySelector('.partners-next').addEventListener('click', function(){ goTo(current + 1); startAuto(); });
+
+  window.addEventListener('resize', function(){ current = 0; buildDots(); goTo(0); });
+
+  buildDots();
+  startAuto();
+})();
+
+
+function copyText(text, btn) {
+  navigator.clipboard.writeText(text).then(() => {
+    btn.classList.add('copied');
+    btn.innerHTML = '<i class="bx bx-check"></i>';
+    setTimeout(() => {
+      btn.classList.remove('loved');
+      btn.innerHTML = '<i class="bx bx-copy"></i>';
+    }, 2000);
+  });
+}
